@@ -1,0 +1,2 @@
+//lodash use to install modules
+npm i lodash
