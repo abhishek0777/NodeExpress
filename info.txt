@@ -1,2 +1,4 @@
-//lodash use to install modules
+//lodash use to help with array objects
 npm i lodash
+//dev dependency ,Nodemon-it will watch our code,if have any changes it will restart the server automatically,to start : npm run dev  ,but first set 'dev' script
+npm i -D Nodemon

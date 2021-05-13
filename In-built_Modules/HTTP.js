@@ -16,3 +16,17 @@ const server=http.createServer((req,res)=>{
 })
 const PORT=5000
 server.listen(PORT,console.log(`Server started on port ${PORT}`))
+
+
+//another style
+
+// const http=require('http')
+// const {readFileSync}=require('fs')
+// const homePage=readFileSync('./navbar-app/index.html')
+// http.createServer((req,res)=>{
+//     console.log(req.url);
+//     console.log("user hit the server");
+//     res.writeHead(200,{'content-type':'text/html'})
+//     res.write(homePage)
+//     res.end()
+// }).listen(5000)
