@@ -3,46 +3,25 @@ const app=express()
 
 //req->middleware->res
 
-//Method -1
-// app.get('/',(req,res)=>{
-//     const method=req.method
-//     const url=req.url
-//     const time=new Date().getFullYear()
-//     console.log(method,url,time);
-//     res.send('home')
-// })
-
-
-
-//Method-2
-// const logger=(req,res,next)=>{
-//     const method=req.method
-//     const url=req.url
-//     const time=new Date().getFullYear()
-//     console.log(method,url,time)
-//     next()
-// }
-// app.get('/',logger,(req,res)=>{
-//     res.send('home');
-// })
-//Method-2 end
-
-
-
-//Method-3
 const logger=require('./Middleware/logger')
+const authorize=require('./Middleware/authorize')
+
+
+//intstalled middleware(third party)
+
+//morgan is a logger middleware
+const morgan=require('morgan')
+//tiny method gives essential info only
+app.use(morgan('tiny'))
+
 
 //set middleware
-app.use(logger)
-/*
-if it is app.use('/api',logger)
-to work it on those specified path
-*/
+// app.use([logger,authorize])
+
 app.get('/',(req,res)=>{
+    console.log(req.user);
     res.send("home")
 })
-//Method-3 end
-
 
 
 
