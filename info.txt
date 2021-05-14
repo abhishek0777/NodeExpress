@@ -2,3 +2,23 @@
 npm i lodash
 //dev dependency ,Nodemon-it will watch our code,if have any changes it will restart the server automatically,to start : npm run dev  ,but first set 'dev' script
 npm i -D Nodemon
+
+
+
+/*
+to use css,js of html file which we are sending to server,
+create middleware
+app.use(express.static('./public/....'))
+*/
+/*
+Without template engine
+// app.get('/',(req,res)=>{
+//     res.sendFile(path.join(__dirname,'./navbar-app/index.html'))
+// })
+
+*/
+
+/*
+We use express for:API or SSR(server side rendering)
+
+*/
