@@ -22,3 +22,8 @@ Without template engine
 We use express for:API or SSR(server side rendering)
 
 */
+
+/*
+"Heart and soul of express:Dont miss it ever"
+Express middleware are functions that execute during request to the server,have access to req and res object
+*/
